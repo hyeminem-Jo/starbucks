@@ -1,0 +1,217 @@
+header {
+  border: 1px solid;
+  height: 120px;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+header > .inner {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+header .logo {
+  width: 15%;
+  position: relative;
+  height: 100%;
+}
+
+header .logo a {
+  height: 70%;
+  width: 100%;
+  display: block;
+  background: url(../images/starbucks_logo.png) no-repeat center;
+  background-size: contain;
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu {
+  display: flex;
+  height: 40px;
+  margin-top: 10px;
+}
+
+header .sub-menu ul.menu {
+  display: flex;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+}
+
+header .sub-menu ul.menu .menu-li {
+  position: relative;
+  height: 100%;
+}
+
+header .sub-menu ul.menu .menu-li::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 70%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ddd;
+}
+
+header .sub-menu ul.menu .menu-li:last-child:after {
+  display: none;
+}
+
+header .sub-menu ul.menu .menu-li .menu-a {
+  font-size: 12px;
+  display: block;
+  padding: 11px 16px;
+  color: #aaa;
+}
+
+header .sub-menu ul.menu .menu-li .menu-a:hover {
+  color: #000;
+}
+
+header .sub-menu .search {
+  position: relative;
+  height: 40px;
+  margin-left: 10px;
+}
+
+header .sub-menu .search input[type=text] {
+  border: 1px solid #ccc;
+  outline: none;
+  width: 36px;
+  height: 100%;
+  color: #777;
+  border-radius: 10px;
+  transition: width 0.3s;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+header .sub-menu .search input[type=text]:focus {
+  width: 150px;
+  border-color: #669900;
+}
+
+header .sub-menu .search .material-icons {
+  position: absolute;
+  /* border: 1px solid; */
+  right: 0;
+  line-height: 36px;
+  font-size: 30px;
+  /* cursor: pointer; */
+  transition: opacity 0.5s;
+}
+
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
+}
+
+header ul.main-menu {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  z-index: 1;
+}
+
+header ul.main-menu .item {}
+
+header ul.main-menu .item .item__name {
+  padding: 15px 20px 30px 20px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+
+header ul.main-menu .item:hover .item__name {
+  background-color: #2c2a29;
+  color: #669900;
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+}
+
+header ul.main-menu .item .item__contents {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: none;
+}
+
+ul.main-menu .item:hover .item__contents {
+  display: block;
+}
+
+ul.main-menu .item .item__contents .contents__menu {
+  border: 1px solid;
+  background-color: #2c2a29;
+}
+
+.item .item__contents .contents__menu .menu__inner {
+  display: flex;
+  padding: 30px 0 40px;
+}
+
+.item__contents .contents__menu .menu__inner .li-01 {
+  border: 1px solid;
+  width: 240px;
+}
+
+.contents__menu .menu__inner .li-01 .li-01__title{
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.contents__menu .menu__inner .li-01 .li-02-a {
+  font-size: 14px;
+  display: block;
+  padding: 5px 0;
+  color: #999;
+}
+
+.contents__menu .menu__inner .li-01 .li-02-a:hover {
+  color: #fff;
+}
+
+ul.main-menu .item .item__contents .contents__texture {
+  border: 1px solid;
+  font-size: 12px;
+  /* background-color: #2c2a29; */
+  background: url(../images/main_menu_pattern.jpg) no-repeat;
+  background-size: cover;
+  border-top: 1px solid #999;
+  padding: 15px 0 25px;
+  line-height: 1.7em;
+}
+
+.item .item__contents .contents__texture .texture__title {
+  color: #999;
+}
+
+.item .item__contents .contents__texture .texture__desc {
+  color: #669900;
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 20px;
+}
+
+header .badges .badge {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 4px 4px 7px rgb(197, 196, 196);
+  cursor: pointer;
+}
